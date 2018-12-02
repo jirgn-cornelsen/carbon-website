@@ -15,9 +15,6 @@ import Example from '../components/Example';
 import ColorBlock from '../components/ColorBlock';
 import ColorCard from '../components/ColorCard';
 import IconLibrary from '../components/IconLibrary';
-import TypeScaleTable from '../components/TypeScaleTable';
-import TypeStylesTable from '../components/TypeStylesTable';
-import TypeWeightTable from '../components/TypeWeightTable';
 import ComponentCode from '../components/ComponentCode';
 import ComponentDocs from '../components/ComponentDocs';
 import ComponentStatus from '../components/ComponentStatus';
@@ -25,7 +22,6 @@ import ComponentReact from '../components/ComponentReact';
 import Glossary from '../components/Glossary';
 import MotionExample from '../components/MotionExample';
 import LayerTypes from '../components/LayerTypes';
-import LayerUsage from '../components/LayerUsage';
 import ComponentOverview from '../components/ComponentOverview';
 
 // Custom Markdown
@@ -54,9 +50,6 @@ const renderAst = new rehypeReact({
     'color-block': ColorBlock,
     'color-card': ColorCard,
     'icon-library': IconLibrary,
-    'type-scale-table': TypeScaleTable,
-    'type-weight-table': TypeWeightTable,
-    'type-styles-table': TypeStylesTable,
     component: ComponentCode,
     'component-react': ComponentReact,
     'component-docs': ComponentDocs,
@@ -64,7 +57,6 @@ const renderAst = new rehypeReact({
     glossary: Glossary,
     'motion-example': MotionExample,
     'layer-types': LayerTypes,
-    'layer-usage': LayerUsage,
     'component-overview': ComponentOverview,
   },
 }).Compiler;

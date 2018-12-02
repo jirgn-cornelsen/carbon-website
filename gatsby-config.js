@@ -7,8 +7,7 @@ const { PATH_PREFIX = '/' } = process.env;
 module.exports = {
   pathPrefix: PATH_PREFIX,
   siteMetadata: {
-    title: 'Carbon Design System',
-    titleInternal: 'IBM Product Design'
+    title: 'Cornelsen Design System'
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -16,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Carbon Design System`,
-        short_name: `Carbon`,
+        name: `Cornelsen Design System`,
+        short_name: `CDS`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#cccccc`,

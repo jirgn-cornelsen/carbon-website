@@ -15,7 +15,6 @@ import Example from '../components/Example';
 import ColorBlock from '../components/ColorBlock';
 import ColorCard from '../components/ColorCard';
 import IconLibrary from '../components/IconLibrary';
-import IconLibraryExperimental from '../components/IconLibrary/IconLibraryExperimental';
 import TypeScaleTable from '../components/TypeScaleTable';
 import TypeStylesTable from '../components/TypeStylesTable';
 import TypeWeightTable from '../components/TypeWeightTable';
@@ -55,7 +54,6 @@ const renderAst = new rehypeReact({
     'color-block': ColorBlock,
     'color-card': ColorCard,
     'icon-library': IconLibrary,
-    'icon-library-experimental': IconLibraryExperimental,
     'type-scale-table': TypeScaleTable,
     'type-weight-table': TypeWeightTable,
     'type-styles-table': TypeStylesTable,
@@ -76,35 +74,23 @@ export default ({ data, pageContent }) => {
   let currentPage = post.fields.currentPage;
   let slug = post.fields.slug;
   let tabs = post.frontmatter.tabs;
-  let internal = post.frontmatter.internal;
-
-  const { GATSBY_CARBON_ENV } = process.env;
-  const isInternal = GATSBY_CARBON_ENV !== 'internal' && internal == true;
 
   const classNames = classnames('page-content', {
     'page-content--component': post.frontmatter.label === 'Component',
   });
 
-  if (isInternal) {
-    return (
-      <Layout>
-        <FourOhFour />
-      </Layout>
-    );
-  } else {
-    return (
-      <Layout>
-        <PageHeader
-          title={post.frontmatter.title}
-          label={post.frontmatter.label}
-        />
-        {!(tabs === null) && (
-          <PageTabs slug={slug} currentTab={currentPage} tabs={tabs} />
-        )}
-        <div className={classNames}> {renderAst(post.htmlAst)}</div>
-      </Layout>
-    );
-  }
+  return (
+    <Layout>
+      <PageHeader
+        title={post.frontmatter.title}
+        label={post.frontmatter.label}
+      />
+      {!(tabs === null) && (
+        <PageTabs slug={slug} currentTab={currentPage} tabs={tabs} />
+      )}
+      <div className={classNames}> {renderAst(post.htmlAst)}</div>
+    </Layout>
+  );
 };
 
 export const query = graphql`
@@ -119,7 +105,6 @@ export const query = graphql`
         title
         label
         tabs
-        internal
       }
     }
   }

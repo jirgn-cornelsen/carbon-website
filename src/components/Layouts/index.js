@@ -9,8 +9,6 @@ import Footer from '../Footer';
 import favicon32 from '../../content/global/images/favicon-32.png';
 
 import '../../styles/index.scss';
-import '../../styles/experimental.scss';
-//import '../../styles/halloween-components.scss';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -94,7 +92,6 @@ class Layout extends React.Component {
 
   render() {
     const { GATSBY_CARBON_ENV } = process.env;
-    const isInternal = GATSBY_CARBON_ENV == 'internal';
     const { children } = this.props;
     const classNames = classnames('container', {
       'container--expanded': !this.state.isOpen,
@@ -107,7 +104,6 @@ class Layout extends React.Component {
             site {
               siteMetadata {
                 title
-                titleInternal
               }
             }
           }
@@ -115,7 +111,7 @@ class Layout extends React.Component {
         render={data => (
           <>
             <Helmet
-              title={isInternal ? data.site.siteMetadata.titleInternal : data.site.siteMetadata.title}
+              title={data.site.siteMetadata.title}
               meta={[
                 {
                   name: 'description',

@@ -11,13 +11,6 @@ import navigation from '../../data/navigation/navigation.json';
 export default class SideNav extends React.Component {
   renderNavItems = (nav, loc) =>
     Object.keys(nav).map(item => {
-      const { GATSBY_CARBON_ENV } = process.env;
-      const hideInternal =
-        GATSBY_CARBON_ENV !== 'internal' && nav[item].internal;
-
-      if (hideInternal) {
-        return '';
-      }
       return (
         <SideNavItem
           itemSlug={item}
@@ -36,17 +29,12 @@ export default class SideNav extends React.Component {
     };
 
   render() {
-    const { GATSBY_CARBON_ENV } = process.env;
-    const isInternal = GATSBY_CARBON_ENV == 'internal';
-
     const { isOpen, isFinal } = this.props;
-
     const classNames = classnames({
       'side-nav': true,
       'side-nav__closed': !isOpen,
       'side-nav__closed--final': isFinal && !isOpen,
     });
-
     const classNamesClickToClose = classnames({
       'side-nav-click-to-close': true,
       'side-nav-click-to-close__closed': !isOpen,
@@ -70,19 +58,10 @@ export default class SideNav extends React.Component {
               </a>
               <nav className={classNames}>
                 <div className="side-nav--header">
-                  
-                  {isInternal ? (
                     <Link to="/" className="side-nav__logo">
-                      IBM <span>Product Design</span>
+                      <span>Cornelsen</span> Design System
                     </Link>
-                  ) : (
-                    <>
-                      <Link to="/" className="side-nav__logo">
-                        <span>Carbon</span> Design System
-                      </Link>
-                      <GlobalSearch />
-                    </>
-                  )}
+                    <GlobalSearch />
                 </div>
                 <div className="side-nav--items">
                   <ul role="menu" className="side-nav__nav-items">{navItems}</ul>
@@ -92,7 +71,7 @@ export default class SideNav extends React.Component {
                       kind="secondary"
                       icon="icon--arrow--right"
                       iconDescription="Arrow right"
-                      href="https://github.com/ibm/carbon-design-kit">
+                      href="#">
                       Design Kit
                     </Button>
                     <Link

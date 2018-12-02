@@ -32,17 +32,17 @@ $font-family: 'IBM Plex Sans', 'ibm-plex-sans', 'Helvetica Neue', Arial,
 @import '../components/Footer/footer.scss';
 @import '../components/Example/example.scss';
 @import '../components/ColorBlock/color-block.scss';
-@import '../components/ColorCard/color-card.scss';
-@import '../components/IconCard/icon-card.scss';
-@import '../components/IconEmptyState/icon-empty-state.scss';
-@import '../components/TypeScaleTable/type-scale-table.scss';
-@import '../components/TypeStylesTable/type-styles-table.scss';
-@import '../components/TypeWeightTable/type-weight-table.scss';
-@import '../components/GlossaryNav/glossary-nav.scss';
-@import '../components/GlossaryList/glossary-list.scss';
-@import '../components/MotionExample/motion-example.scss';
-@import '../components/LayerTypes/layer-types.scss';
-@import '../components/LayerUsage/layer-usage.scss';
+// @import '../components/ColorCard/color-card.scss';
+// @import '../components/IconCard/icon-card.scss';
+// @import '../components/IconEmptyState/icon-empty-state.scss';
+// @import '../components/TypeScaleTable/type-scale-table.scss';
+// @import '../components/TypeStylesTable/type-styles-table.scss';
+// @import '../components/TypeWeightTable/type-weight-table.scss';
+// @import '../components/GlossaryNav/glossary-nav.scss';
+// @import '../components/GlossaryList/glossary-list.scss';
+// @import '../components/MotionExample/motion-example.scss';
+// @import '../components/LayerTypes/layer-types.scss';
+// @import '../components/LayerUsage/layer-usage.scss';
 @import '../components/ComponentCode/component-code.scss';
 @import '../components/ComponentExample/component-example.scss';
 @import '../components/ComponentExample/component-overrides.scss';
@@ -59,8 +59,3 @@ $font-family: 'IBM Plex Sans', 'ibm-plex-sans', 'Helvetica Neue', Arial,
 //---------------------------------------
 @import 'prism';
 @import 'syntax';
-
-//---------------------------------------
-// Halloween 🎃
-//---------------------------------------
-//@import 'halloween';

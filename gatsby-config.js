@@ -11,12 +11,6 @@ module.exports = {
     titleInternal: 'IBM Product Design'
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-80001368-1",
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

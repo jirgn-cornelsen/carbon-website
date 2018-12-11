@@ -694,11 +694,22 @@
   version "0.0.1-alpha.12"
   resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-0.0.1-alpha.12.tgz#27f1449ff8e503e42e478ca567dfa6a6b453debe"
 
-"@carbon/icons-react@^0.0.1-alpha.12", "@carbon/icons-react@^0.0.1-alpha.2":
+"@carbon/icon-helpers@0.0.1-alpha.22":
+  version "0.0.1-alpha.22"
+  resolved "https://registry.yarnpkg.com/@carbon/icon-helpers/-/icon-helpers-0.0.1-alpha.22.tgz#4aa71721a93a95111a153753e6d76e3d38db5b88"
+
+"@carbon/icons-react@^0.0.1-alpha.12":
   version "0.0.1-alpha.12"
   resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-0.0.1-alpha.12.tgz#9cdc7846d0862838770c966a7f130953a89887a5"
   dependencies:
     "@carbon/icon-helpers" "0.0.1-alpha.12"
+    prop-types "^15.6.2"
+
+"@carbon/icons-react@^0.0.1-alpha.20":
+  version "0.0.1-alpha.22"
+  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-0.0.1-alpha.22.tgz#e862651ee8a306bde271a5700e38c683919afd41"
+  dependencies:
+    "@carbon/icon-helpers" "0.0.1-alpha.22"
     prop-types "^15.6.2"
 
 "@emotion/cache@^0.8.8":
@@ -3454,11 +3465,10 @@ capture-stack-trace@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz#a6c0bbe1f38f3aa0b92238ecb6ff42c344d4135d"
 
-carbon-components-react@6.52.1:
-  version "6.52.1"
-  resolved "https://registry.yarnpkg.com/carbon-components-react/-/carbon-components-react-6.52.1.tgz#e8c222a0fe30b78d15b7641bae63128359bf8315"
+carbon-components-react@../carbon-components-react:
+  version "5.5.1"
   dependencies:
-    "@carbon/icons-react" "^0.0.1-alpha.2"
+    "@carbon/icons-react" "^0.0.1-alpha.20"
     classnames "2.2.6"
     downshift "^1.31.14"
     flatpickr "4.5.1"
@@ -3472,7 +3482,6 @@ carbon-components-react@6.52.1:
 carbon-components@^9.58.2:
   version "9.58.2"
   resolved "https://registry.yarnpkg.com/carbon-components/-/carbon-components-9.58.2.tgz#298dc5e479e755d425f749b56f4c3bc05674baa9"
-  integrity sha512-tNT+EffdKShBgYm7hZl+PYZo0tE7ABEvhQrZfG7qygT6YxnsOomtiEIr1T97HOpMHZ+O/3JSiqyQo9Yv8dScEw==
   dependencies:
     carbon-icons "^7.0.7"
     flatpickr "4.5.2"
@@ -6300,12 +6309,6 @@ gatsby-link@^2.0.6:
     "@reach/router" "^1.1.1"
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
-
-gatsby-plugin-google-analytics@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.7.tgz#22ac5fe3a226c19bd523997cb3891ab0d3454e37"
-  dependencies:
-    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-manifest@^2.0.10:
   version "2.0.10"

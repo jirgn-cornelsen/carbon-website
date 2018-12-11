@@ -61,7 +61,6 @@ export default class SideNav extends React.Component {
                     <Link to="/" className="side-nav__logo">
                       <span>Cornelsen</span> Design System
                     </Link>
-                    <GlobalSearch />
                 </div>
                 <div className="side-nav--items">
                   <ul role="menu" className="side-nav__nav-items">{navItems}</ul>
